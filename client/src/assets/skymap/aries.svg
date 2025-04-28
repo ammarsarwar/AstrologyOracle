@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Dark sky background -->
+  <rect width="100%" height="100%" fill="#121212"/>
+  
+  <!-- Star field -->
+  <g fill="#FFFFFF" opacity="0.5">
+    <circle cx="120" cy="150" r="1"/>
+    <circle cx="220" cy="190" r="1"/>
+    <circle cx="320" cy="80" r="1"/>
+    <circle cx="420" cy="220" r="1"/>
+    <circle cx="520" cy="130" r="1"/>
+    <circle cx="620" cy="320" r="1"/>
+    <circle cx="720" cy="180" r="1"/>
+    <circle cx="170" cy="280" r="1"/>
+    <circle cx="270" cy="370" r="1"/>
+    <circle cx="370" cy="460" r="1"/>
+    <circle cx="470" cy="550" r="1"/>
+    <circle cx="570" cy="410" r="1"/>
+    <circle cx="670" cy="320" r="1"/>
+    <circle cx="140" cy="430" r="1"/>
+    <circle cx="240" cy="520" r="1"/>
+    <circle cx="340" cy="330" r="1"/>
+    <circle cx="440" cy="240" r="1"/>
+    <circle cx="540" cy="150" r="1"/>
+    <circle cx="640" cy="240" r="1"/>
+    <circle cx="740" cy="430" r="1"/>
+  </g>
+  
+  <!-- Brighter stars -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <circle cx="200" cy="250" r="2"/>
+    <circle cx="350" cy="200" r="2"/>
+    <circle cx="500" cy="300" r="2"/>
+    <circle cx="650" cy="350" r="2"/>
+    <circle cx="400" cy="400" r="2"/>
+    <circle cx="550" cy="450" r="2"/>
+    <circle cx="300" cy="500" r="2"/>
+  </g>
+  
+  <!-- Aries main stars -->
+  <g fill="#FFFFFF">
+    <circle cx="350" cy="250" r="5"/> <!-- Hamal (Alpha Arietis) -->
+    <circle cx="260" cy="270" r="4"/> <!-- Sheratan (Beta Arietis) -->
+    <circle cx="230" cy="310" r="3"/> <!-- Mesarthim (Gamma Arietis) -->
+    <circle cx="400" cy="330" r="3"/> <!-- Botein (Delta Arietis) -->
+    <circle cx="450" cy="290" r="2.5"/> <!-- Bharani (41 Arietis) -->
+  </g>
+  
+  <!-- Aries constellation lines -->
+  <g stroke="#FFD700" stroke-width="1" opacity="0.7" fill="none">
+    <path d="M230,310 L260,270 L350,250 L400,330 L450,290"/>
+  </g>
+  
+  <!-- Constellation boundary (simplified) -->
+  <path d="M150,150 L500,150 L550,400 L250,450 Z" stroke="#333" stroke-width="1" fill="none" stroke-dasharray="5,5"/>
+</svg>

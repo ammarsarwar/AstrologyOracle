@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Dark background -->
+  <rect width="100%" height="100%" fill="#1e1e1e"/>
+  
+  <!-- Star field background -->
+  <g fill="#FFFFFF" opacity="0.3">
+    <circle cx="50" cy="50" r="1"/>
+    <circle cx="100" cy="75" r="1"/>
+    <circle cx="150" cy="25" r="1"/>
+    <circle cx="200" cy="100" r="1"/>
+    <circle cx="250" cy="50" r="1"/>
+    <circle cx="300" cy="150" r="1"/>
+    <circle cx="350" cy="75" r="1"/>
+    <circle cx="75" cy="125" r="1"/>
+    <circle cx="125" cy="175" r="1"/>
+    <circle cx="175" cy="225" r="1"/>
+    <circle cx="225" cy="275" r="1"/>
+    <circle cx="275" cy="200" r="1"/>
+    <circle cx="325" cy="150" r="1"/>
+    <circle cx="60" cy="210" r="1"/>
+    <circle cx="110" cy="260" r="1"/>
+    <circle cx="160" cy="160" r="1"/>
+    <circle cx="210" cy="110" r="1"/>
+    <circle cx="260" cy="60" r="1"/>
+    <circle cx="310" cy="110" r="1"/>
+    <circle cx="360" cy="210" r="1"/>
+    <circle cx="30" cy="250" r="1"/>
+    <circle cx="80" cy="300" r="1"/>
+    <circle cx="130" cy="350" r="1"/>
+    <circle cx="180" cy="370" r="1"/>
+    <circle cx="230" cy="320" r="1"/>
+    <circle cx="280" cy="270" r="1"/>
+    <circle cx="330" cy="220" r="1"/>
+    <circle cx="380" cy="170" r="1"/>
+  </g>
+  
+  <!-- Constellation pattern -->
+  <g>
+    <!-- Main stars of Aries -->
+    <circle cx="175" cy="150" r="5" fill="#FFFFFF"/> <!-- Hamal -->
+    <circle cx="130" cy="170" r="3.5" fill="#FFFFFF"/> <!-- Sheratan -->
+    <circle cx="115" cy="200" r="3" fill="#FFFFFF"/> <!-- Mesarthim -->
+    <circle cx="200" cy="210" r="3" fill="#FFFFFF"/> <!-- Botein -->
+    <circle cx="225" cy="180" r="2.5" fill="#FFFFFF"/> <!-- Bharani -->
+    
+    <!-- Constellation lines -->
+    <path d="M115,200 L130,170 L175,150 L200,210 L225,180" stroke="#FFD700" stroke-width="1.5" fill="none" opacity="0.8"/>
+  </g>
+  
+  <!-- Aries symbol in gold -->
+  <g transform="translate(200, 80) scale(0.5)" opacity="0.9">
+    <path d="M50,20 C65,20 65,60 50,60 C35,60 35,20 50,20 Z M50,60 C65,60 80,85 85,90 M50,60 C35,60 20,85 15,90" 
+      fill="none" 
+      stroke="#FFD700" 
+      stroke-width="5" 
+      stroke-linecap="round" 
+      stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Gradient effect at bottom -->
+  <rect x="0" y="300" width="400" height="100" fill="url(#gradientBottom)"/>
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="gradientBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1e1e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1e1e1e" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+</svg>
