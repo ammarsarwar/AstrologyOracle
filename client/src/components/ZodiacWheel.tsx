@@ -102,15 +102,16 @@ export default function ZodiacWheel({ selectedId, onConstellationClick }: Zodiac
               } bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300`}
               onClick={() => handleClick(constellation.id)}
             >
-              <img 
-                src={constellation.symbolUrl} 
-                alt={`${constellation.name} symbol`} 
+              {/* Display appropriate zodiac symbol */}
+              <span 
                 className={`${
                   selectedId === constellation.id 
-                    ? 'w-8 h-8' 
-                    : 'w-6 h-6 opacity-60'
-                } object-contain zodiac-icon ${selectedId === constellation.id ? 'active' : ''}`}
-              />
+                    ? 'text-2xl' 
+                    : 'text-xl opacity-60'
+                } text-[#FFD700] zodiac-icon ${selectedId === constellation.id ? 'active' : ''}`}
+              >
+                {constellation.symbol}
+              </span>
             </div>
           </div>
         ))}
