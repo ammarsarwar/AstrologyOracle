@@ -55,21 +55,27 @@ export default function Home() {
             Failed to load constellations. Please try again.
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto">
             {constellations?.map((constellation: any) => (
               <div 
                 key={constellation.id}
-                className="constellation-card bg-[#1e1e1e] rounded-xl p-4 cursor-pointer"
+                className="constellation-card bg-[#1e1e1e] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => handleConstellationClick(constellation.id)}
               >
-                <h3 className="text-xl font-playfair font-bold mb-2">{constellation.name}</h3>
-                <p className="text-gray-400 text-sm mb-3">{constellation.date}</p>
-                <div className="aspect-square rounded-lg overflow-hidden">
+                <div className="relative aspect-square">
                   <img 
                     src={constellation.imageUrl} 
                     alt={constellation.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-4">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-3xl text-primary opacity-90">{constellation.symbol}</span>
+                      <span className="px-2 py-1 bg-primary/20 rounded text-xs text-primary uppercase font-bold">{constellation.element}</span>
+                    </div>
+                    <h3 className="text-xl font-playfair font-bold">{constellation.name}</h3>
+                    <p className="text-gray-300 text-sm">{constellation.date}</p>
+                  </div>
                 </div>
               </div>
             ))}

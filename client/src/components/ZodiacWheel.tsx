@@ -9,18 +9,18 @@ interface ZodiacWheelProps {
 
 export default function ZodiacWheel({ selectedId, onConstellationClick }: ZodiacWheelProps) {
   const [, navigate] = useLocation();
-  const [positions, setPositions] = useState<Record<string, { top: string, left: string, right?: string, bottom?: string }>>({});
+  const [positions, setPositions] = useState<Record<string, { top?: string, left?: string, right?: string, bottom?: string }>>({});
 
-  const { data: constellations, isLoading } = useQuery({
+  const { data: constellations = [], isLoading } = useQuery({
     queryKey: ["/api/constellations"],
   });
 
   useEffect(() => {
-    if (constellations) {
+    if (constellations && constellations.length > 0) {
       // Calculate positions for the zodiac signs on the wheel
-      const newPositions: Record<string, { top: string, left: string, right?: string, bottom?: string }> = {};
+      const newPositions: Record<string, { top?: string, left?: string, right?: string, bottom?: string }> = {};
       
-      constellations.forEach((constellation: any, index: number) => {
+      (constellations as any[]).forEach((constellation: any, index: number) => {
         const angle = (index * 30) * (Math.PI / 180);
         const radius = 42; // % of container
         
@@ -88,7 +88,7 @@ export default function ZodiacWheel({ selectedId, onConstellationClick }: Zodiac
         </div>
         
         {/* Zodiac Signs Positions */}
-        {constellations?.map((constellation: any) => (
+        {(constellations as any[])?.map((constellation: any) => (
           <div
             key={constellation.id}
             className="absolute"
